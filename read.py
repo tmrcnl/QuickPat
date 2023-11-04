@@ -1,5 +1,5 @@
 import bs4
-import parser
+import patentparser
 
 # this is a test (TOC)
 
@@ -25,16 +25,16 @@ for single_xml in split_xml:
         continue
     soup = bs4.BeautifulSoup(single_xml, "xml")
 
-    if not parser.isPatentApplication(soup):
+    if not patentparser.isPatentApplication(soup):
         continue
 
-    publ_number = parser.getPublicationNumber(soup)
+    publ_number = patentparser.getPublicationNumber(soup)
     # print("publ_number", publ_number)
 
-    abstract = parser.getAbstract(soup)
+    abstract = patentparser.getAbstract(soup)
     # print("abstract", abstract)
 
-    claim_data = parser.getClaimData(soup)
+    claim_data = patentparser.getClaimData(soup)
     # print("claim_data", claim_data)
 
     patents.append(Patent(publ_number, abstract, claim_data))
