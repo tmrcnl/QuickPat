@@ -2,7 +2,7 @@ import os
 import openai
 
 # OpenAI API key setup (created this key specific for the project)
-openai.api_key = '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'
+openai.api_key = ''
 
 def sendAPIRequest(system_content, user_content, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value):
 
