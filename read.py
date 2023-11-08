@@ -1,7 +1,6 @@
 import bs4
 import patentparser
-
-# this is a test (TOC)
+import openaiapi
 
 with open("ipa200102.xml", "r") as f:
     xml = f.read()
@@ -39,8 +38,23 @@ for single_xml in split_xml:
 
     patents.append(Patent(publ_number, abstract, claim_data))
 
+# Open AI API parameters
+temp_value = 1
+max_tokens_value = 256
+top_p_value = 1
+frequency_penalty_value = 0
+presence_penalty_value = 0
+
+abstract_prompt = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to itself, or the words "abstract", "invention", "patent", "patent application", or "document". Avoid discussing the advantages or improvements of what is described. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
+
 for patent in patents[:5]:
     print("--------------------------------------------------")
-    print(patent)
+    # print(patent)
+
+    api_response = openaiapi.sendAPIRequest(abstract_prompt, patent.abstract, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
+    generated_abstract = api_response.choices[0].message.content
+
+    print('Ground truth abstract: ', patent.abstract)
+    print('Generated abstract: ' , generated_abstract)
 
 print(len(patents))
