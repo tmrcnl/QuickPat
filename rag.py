@@ -24,7 +24,12 @@ results = pd.DataFrame({'distances': distances[0], 'ann': ann[0]})
 
 merge = pd.merge(results, df, left_on='ann', right_index=True)
 
-print(merge)
+print("merge:", merge)
+
+print("closest abstracts:")
+for abstract in merge.iloc[:5]['abstract']:
+    print("abstract:")
+    print(abstract)
 
 # print(ann[0][:5])
 # print(df.iloc[ann[0][:5]])
