@@ -1,6 +1,7 @@
 import lib.openaiapi as openaiapi
 import pandas as pd
 import lib.constants as constants
+import lib.evaluate as evaluate
 
 patents_df = pd.read_parquet(constants.PROCESSED_FILE)
 
@@ -23,7 +24,12 @@ for i, patent in patents_df.iloc[:2].iterrows():
     api_response = openaiapi.sendAPIRequest(abstract_prompt, first_claim, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
     generated_abstract = api_response.choices[0].message.content
 
+    # evaluate generated abstract text (using sentence-transformers semanting embedding and cosine similarity)
+    score_result = evaluate.evaluateGeneratedText(generated_abstract, ground_truth_abstract)
+    
     print('Ground truth abstract: ', ground_truth_abstract)
     print('Generated abstract: ' , generated_abstract)
+    print('Cosine similarity score: ', score_result)
+    
 
 # print(len(patents_df))
