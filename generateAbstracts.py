@@ -12,7 +12,7 @@ top_p_value = 1
 frequency_penalty_value = 0
 presence_penalty_value = 0
 
-abstract_prompt = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to itself, or the words "abstract", "invention", "patent", "patent application", or "document". Avoid discussing the advantages or improvements of what is described. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
+abstract_system = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to itself, or the words "abstract", "invention", "patent", "patent application", or "document". Avoid discussing the advantages or improvements of what is described. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
 
 df = pd.DataFrame(columns=['i', 'title', 'ground_truth_abstract', 'generated_abstract'])
 
@@ -24,7 +24,7 @@ for i in constants.PATENT_INDICES:
     ground_truth_abstract = patent["abstract"]
     first_claim = patent["claim_data"][0]
 
-    api_response = openaiapi.sendAPIRequest(abstract_prompt, first_claim, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
+    api_response = openaiapi.sendAPIRequest(abstract_system, first_claim, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
     generated_abstract = api_response.choices[0].message.content
 
     print('Ground truth abstract: ', ground_truth_abstract)
