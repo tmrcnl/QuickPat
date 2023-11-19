@@ -16,8 +16,11 @@ Processes the raw patent file (xml) into a pandas dataframe with the fields we'r
 ### indexPatents.py
 Reads back the dataframe, encodes each abstract, then indexes into a vector db. The vector db is [FAISS](https://faiss.ai/index.html).
 
-### read.py
-Makes a sample call to openai to generate an abstract
+### generateAbstracts.py
+Generates some abstracts using GPT4 and writes it to a csv file.
+
+### evaluateAbstracts.py
+Evaluates the generated abstracts from previous step using cosine similarity and euclidean distance.
 
 ### rag.py
 Searches the index for other abstracts that match the search query abstract.

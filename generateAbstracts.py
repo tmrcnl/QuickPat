@@ -14,8 +14,11 @@ presence_penalty_value = 0
 
 abstract_prompt = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to itself, or the words "abstract", "invention", "patent", "patent application", or "document". Avoid discussing the advantages or improvements of what is described. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
 
-for i, patent in patents_df.iloc[:2].iterrows():
+df = pd.DataFrame(columns=['i', 'title', 'ground_truth_abstract', 'generated_abstract'])
+
+for i in constants.PATENT_INDICES:
     print("--------------------------------------------------")
+    patent = patents_df.iloc[i]
     # print(patent)
 
     ground_truth_abstract = patent["abstract"]
@@ -24,12 +27,15 @@ for i, patent in patents_df.iloc[:2].iterrows():
     api_response = openaiapi.sendAPIRequest(abstract_prompt, first_claim, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
     generated_abstract = api_response.choices[0].message.content
 
-    # evaluate generated abstract text (using sentence-transformers semanting embedding and cosine similarity)
-    score_result = evaluate.evaluateGeneratedText(generated_abstract, ground_truth_abstract)
-    
     print('Ground truth abstract: ', ground_truth_abstract)
     print('Generated abstract: ' , generated_abstract)
-    print('Cosine similarity score: ', score_result)
-    
 
-# print(len(patents_df))
+    df = df._append({
+        'i': i,
+        'title': patent["title"],
+        'ground_truth_abstract': ground_truth_abstract,
+        'generated_abstract': generated_abstract,
+    }, ignore_index=True)
+
+print("writing to file", constants.GENERATED_ABSTRACTS_FILE)
+df.to_csv(constants.GENERATED_ABSTRACTS_FILE, index=False)
