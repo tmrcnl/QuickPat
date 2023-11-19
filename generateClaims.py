@@ -26,11 +26,12 @@ provided_claim = "1. Apparatus for connecting an implement to a three-point hitc
 df = pd.DataFrame(columns=['i', 'title', 'ground_truth_claims', 'generated_claims'])
 
 top_k = 5 # 5 closest patent records from DB
-results = rag.RAGCall(generated_abstract, top_k)
+omit_index = i
+results = rag.RAGCall(generated_abstract, top_k, omit_index)
 example_claims = ' '.join(map(str, results['claim_data']))
 
 ground_truth_claims = patent["claim_data"]
-claims_prompt = 'provided claim: ' + provided_claim + 'example claims: ' + example_claims
+claims_prompt = 'provided claim: ' + provided_claim + '\n example claims: ' + example_claims
 
 api_response = openaiapi.sendAPIRequest(claims_system, claims_prompt, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
 generated_claims = api_response.choices[0].message.content

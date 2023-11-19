@@ -4,7 +4,7 @@ import faiss
 import numpy as np
 import lib.constants as constants
 
-def RAGCall(search_query, top_k):
+def RAGCall(search_query, top_k, omit_index=None):
     df = pd.read_parquet(constants.PROCESSED_FILE)
     index = faiss.read_index(constants.INDEX_FILE)
 
@@ -24,6 +24,9 @@ def RAGCall(search_query, top_k):
     results = pd.DataFrame({'distances': distances[0], 'ann': ann[0]})
 
     merge = pd.merge(results, df, left_on='ann', right_index=True)
+
+    # remove index to omit
+    merge = merge[merge.ann != omit_index]
 
     # print("merge:", merge)
 
