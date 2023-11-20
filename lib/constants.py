@@ -4,8 +4,13 @@ FILES_DIR = "files"
 INPUT_FILE = os.path.join(FILES_DIR, "ipa200102.xml")
 PROCESSED_FILE = os.path.join(FILES_DIR, "processed-ipa200102.parquet")
 INDEX_FILE = os.path.join(FILES_DIR, "index-ipa200102.index")
+
 GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts.csv")
 EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts.csv")
+
+GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline.csv")
+EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline.csv")
+
 GENERATED_CLAIMS_FILE = os.path.join(FILES_DIR, "generated_claims.csv")
 EVALUATED_CLAIMS_FILE = os.path.join(FILES_DIR, "evaluated_claims.csv")
 
