@@ -6,6 +6,7 @@ PROCESSED_FILE = os.path.join(FILES_DIR, "processed-ipa200102.parquet")
 INDEX_FILE = os.path.join(FILES_DIR, "index-ipa200102.index")
 
 GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts.csv")
+GENERATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_abstracts_llama2.csv")
 EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts.csv")
 
 GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline.csv")
