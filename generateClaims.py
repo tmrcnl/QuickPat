@@ -13,7 +13,7 @@ top_p_value = 1
 frequency_penalty_value = 0
 presence_penalty_value = 0
 
-claims_system = 'Generate a set of 20 claims, including independent and dependent claims, based on the provided claim and example claims from other patents (for guidance). In the response, do not reproduce the instructions and the provided claim should be claim 1.'
+US_claims_system = 'Generate a set of 20 claims for a US patent application, including independent and dependent claims, based on the provided claim and example claims from other patents (for guidance). Unless the claims slots are needed for important dependent claims of a single claim category, there should be at least two claim categories. Do not include advantages in the claims. In the response, do not reproduce the instructions and the provided claim should be claim 1.'
 
 # using a single generated abstract and provided claim here for now
 # 20200000001
@@ -33,17 +33,40 @@ example_claims = ' '.join(map(str, results['claim_data']))
 ground_truth_claims = patent["claim_data"]
 claims_prompt = 'provided claim: ' + provided_claim + '\n example claims: ' + example_claims
 
-api_response = openaiapi.sendAPIRequest(claims_system, claims_prompt, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
-generated_claims = api_response.choices[0].message.content
+api_US_response = openaiapi.sendAPIRequest(US_claims_system, claims_prompt, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
+generated_US_claims = api_US_response.choices[0].message.content
 
 print('Ground truth claims: ', ground_truth_claims)
-print('Generated claims: ' , generated_claims)
+print('Generated US claims: ' , generated_US_claims)
+
+# generate CA claims based on the US claims
+
+CA_claims_system = 'Generate a set of 20 claims for a Canadian patent application based on the provided US claims, including multiple dependencies.'
+
+api_CA_response = openaiapi.sendAPIRequest(CA_claims_system, generated_US_claims, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
+generated_CA_claims = api_CA_response.choices[0].message.content
+
+print('Generated CA claims: ' , generated_CA_claims)
+
+# generate EP claims based on the US claims and CA claims
+
+EP_claims_system = 'Generate a set of 15 claims for a European patent application based on the provided US and Canadian claims.'
+
+US_and_CA_claims = 'US claims: ' + generated_US_claims + '\n Canadian claims: ' + generated_CA_claims
+
+api_EP_response = openaiapi.sendAPIRequest(EP_claims_system, US_and_CA_claims, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
+generated_EP_claims = api_EP_response.choices[0].message.content
+
+print('Generated EP claims: ' , generated_EP_claims)
+
 
 df = df._append({
     'i': i,
     'title': patent["title"],
     'ground_truth_claims': ground_truth_claims,
-    'generated_claims': generated_claims,
+    'generated_US_claims': generated_US_claims,
+    'generated_CA_claims': generated_CA_claims,
+    'generated_EP_claims': generated_EP_claims,
 }, ignore_index=True)
 
 print("writing to file", constants.GENERATED_CLAIMS_FILE)
