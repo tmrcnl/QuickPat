@@ -1,4 +1,4 @@
-i,title,ground_truth_claims,generated_claims,generated_US_claims,generated_CA_claims,generated_EP_claims
+i,title,ground_truth_claims,generated_US_claims,generated_CA_claims,generated_EP_claims
 0,SYSTEM FOR CONNECTING IMPLEMENT TO MOBILE MACHINERY,"['1. Apparatus for connecting an implement to a three-point hitch of mobile machinery for controllable side-shifting movement of the connected implement, the three point hitch comprising an upper attachment point and two lower attachment points, the apparatus comprising\na) a first framework having a height, a length, and a depth, and comprising at least two parallel, vertically spaced apart, laterally extending rails, an upper cross beam, a lower cross beam, and at least two upwardly extending, laterally spaced apart studs attached to the cross beams and the rails, wherein the rails, the studs, and the cross beams are coplanar in a first framework plane, the first framework plane extending along the height and the length of the first framework;\nb) three attachments attached to the first framework for attachment to the three-point hitch, the attachments comprising an upper attachment attached to the upper cross beam for attachment to the upper attachment point of the three-point hitch and two lower attachments attached to the lower cross beam for attachment to the lower attachment points of the three-point hitch;\nc) a slidable second framework comprising at least two upwardly extending, laterally spaced apart posts and at least two sleeves attached to the posts, the posts and the sleeves being coplanar in the first framework plane, and wherein each sleeve is a surrounding sleeve mounted around one of the rails so that the slidable second framework can slide laterally back and forth along the rails;\nd) three connectors supported by the slidable second framework for connecting the slidable second framework to the implement for movement of the implement by the mobile machinery and the slidable second framework;\ne) at least one driver connected to the first framework and connected to the slidable second framework for driving the slidable second framework laterally back and forth along the rails; and\nf) a guidance system for controlling the driver.'
  '2. The apparatus of claim 1 wherein the guidance system comprises a position signal receiver mounted on the slidable second framework for determining the position of the slidable second framework, and a controller for receiving position signals from the position signal receiver, the controller adapted to control the driver.'
  '3. The apparatus of claim 2 wherein the position signal receiver is for receiving a Global Positioning System (GPS) signal.'
@@ -21,119 +21,84 @@ i,title,ground_truth_claims,generated_claims,generated_US_claims,generated_CA_cl
  '20. The apparatus of claim 19 wherein the two lower connectors each comprises a hook and a latch and the upper connector comprise a hook.'
  '21. The apparatus of claim 14 comprising four of the connectors, wherein the connectors comprise two lower connectors laterally spaced apart and two upper connectors laterally spaced apart.'
  '22. The apparatus of claim 21 wherein the two lower connectors each comprises a hook and a latch and the two upper connectors comprise a hook.'
- '23. The apparatus of claim 14 comprising a guidance system for controlling the driver.']",,"2. The apparatus of claim 1, wherein the studs are adjustable in height for varying the height of the first framework.
-  
-3. The apparatus of claim 1, further comprising at least two connecting bars attached to the slidable second framework for connecting the slidable second framework and the implement.
+ '23. The apparatus of claim 14 comprising a guidance system for controlling the driver.']","Claim 2: The apparatus of claim 1, wherein the upper and lower cross beams are removably attached to the first framework.
 
-4. The apparatus of claim 3, wherein each connecting bar is attached to one connector and the implement.
+Claim 3: The apparatus of claim 1, wherein the first framework includes a plurality of shock-absorbing elements disposed on the studs.
 
-5. The apparatus of claim 1, wherein the at least one driver is a hydraulic cylinder.
+Claim 4: The apparatus of claim 1, wherein the at least two sleeves attached to the second framework are adjustable in their position along the rails.
 
-6. The apparatus of claim 5, wherein the hydraulic cylinder is connected to the first framework and the slidable second framework through pivot connection.
+Claim 5: The apparatus of claim 1, wherein the attachments attached to the first framework are adjustable in their position along the width of the first framework.
 
-7. The apparatus of claim 1, wherein the guidance system includes a control panel for operating the driver.
+Claim 6: The apparatus of claim 1, wherein the three connectors supported by the second framework include a locking mechanism for securing the connection between the slidable second framework and the implement.
 
-8. The apparatus of claim 7, wherein the control panel includes control buttons for moving the slidable second framework back and forth along the rails.
+Claim 7: The apparatus of claim 1, wherein the at least one driver includes a hydraulic piston.
 
-9. The apparatus of claim 1, wherein the first framework and the second framework are made of steel.
+Claim 8: The apparatus of claim 1, wherein the guidance system includes a programmable controller for controlling the movement of the second framework.
 
-10. The apparatus of claim 1, wherein the upper attachment and the lower attachments comprise quick-release couplings for convenient connection and disconnection of the first framework to the three point hitch of the mobile machinery.
+Claim 9: The apparatus of claim 1, wherein the slidable second framework is configured to support a gross weight of at least 500 lbs.
 
-11. The apparatus of claim 1, wherein the upper cross beam and the lower cross beam are adjustable in height for varying the height of the first framework.
+Claim 10: The apparatus of claim 1, wherein the first and second framework are fabricated from a material selected from the group consisting of steel, reinforced plastic, composite material, and aluminum.
 
-12. The apparatus of claim 11, wherein the upper cross beam and the lower cross beam are adjustable in height through a ratchet and pawl mechanism.
+Claim 11: The apparatus of claim 1, further comprising a safety mechanism limiting the movement of the slidable second framework.
 
-13. The apparatus of claim 1, wherein the connectors comprise quick-release couplings for easy connection and disconnection of the second framework to the implement.
+Claim 12: The apparatus of claim 1, wherein the upper and lower cross beams are machined with precision to maintain a tolerance of less than 1% deviation from parallelism.
 
-14. The apparatus of claim 1, wherein the connectors are adjustable to accommodate implements of varying sizes.
+Claim 13: The apparatus of claim 1, wherein the guidance system includes sensors for detecting the lateral position of the second framework.
 
-15. The apparatus of claim 1, further comprising a lock mechanism connected to the first framework and the slidable second framework for selectively locking the slidable second framework in position along the rails.
+Claim 14: The apparatus of claim 13, wherein the sensors are selected from the group consisting of optical sensors, magnetic sensors, and mechanical sensors.
 
-16. The apparatus of claim 1, wherein the first framework and the second framework are substantially rectangular in shape.
+Claim 15: The apparatus of claim 1, further comprising a visual display connected to the guidance system, for providing real-time feedback on the position of the slidable second framework.
 
-17. The apparatus of claim 3, wherein the connecting bars are adjustable in length to accommodate implements of varying sizes.
+Claim 16: The apparatus of claim 1, wherein the three-point hitch is a Category II hitch in accordance with ISO standards.
 
-18. The apparatus of claim 1, wherein the three point hitch of the mobile machinery is the three point hitch of a tractor.
+Claim 17: The apparatus of claim 1, wherein the upper attachment includes a hitch pin hole aligned with the upper attachment point, for quick attachment to the three-point hitch.
 
-19. The apparatus of claim 1, wherein the implement is an implement for agricultural operations.
+Claim 18: The apparatus of claim 1, further comprising coupler sleeves for connecting the three-point hitch to the lower attachments.
 
-20. The apparatus of claim 1, wherein the guidance system also controls the operation of the implement.","1. An apparatus to mount an implement onto a three-point hitch of a mobile machinery, the apparatus comprising: a first framework and a slidable second framework that is slidable relative to the first framework along the rails; at least one driver operatively connected to the second framework for sliding the second framework along the rails; and a guidance system operatively connected to the driver for guiding the sliding of the second framework along the rails.
+Claim 19: The apparatus of claim 1, wherein the second framework includes handlebars for manually controlling the side-shifting movement.
 
-2. The apparatus of claim 1, wherein the rails comprise height adjustable studs that vary the height of the first framework.
+Claim 20: The apparatus of claim 1, wherein the second framework includes an integrated weight distribution system to balance the weight of the implement.","2. The apparatus of claim 1, wherein the guidance system includes a control interface for user input to control the driving of the slidable second framework by the driver.
+3. The apparatus of claim 2, wherein the control interface is a joystick.
+4. The apparatus of claim 1, wherein the driver comprises an electric motor.
+5. The apparatus of claim 1, wherein the driver comprises a hydraulic actuator.
+6. The apparatus of claim 1, where the first framework includes four upwardly extending, laterally spaced apart studs.
+7. The apparatus of claim 1, where the second framework includes four upwardly extending, laterally spaced apart posts.
+8. The apparatus of claim 1, wherein the driver is connected to the first framework and the slidable second framework by means of a coupling device.
+9. The apparatus of claim 8, wherein the coupling device is an adjustable chain.
+10. The apparatus of claim 1, further comprising a locking mechanism for securing the slidable second framework in a fixed position relative to the first framework.
+11. The apparatus of claim 1, wherein the implement is an agricultural device.
+12. The apparatus of claim 11, wherein the agricultural device is a farm plow.
+13. The apparatus of claim 1, further comprising a feedback feature for indicating the lateral position of the slidable second framework relative to the first framework.
+14. The apparatus of claim 1, wherein the height, length, and depth of the first framework are adjustable.
+15. The apparatus of claim 1, wherein the mobile machinery is a tractor.
+16. The apparatus of claim 1, wherein the three connectors supported by the slidable second framework each comprise a hook and eye connection.
+17. The apparatus of claim 1, wherein the guidance system is electronically controlled.
+18. The apparatus of claim 1, wherein each of the at least two sleeves includes a bearing for facilitating the sliding of the slidable second framework along the rails.
+19. The apparatus of claim 1, wherein the second framework and the first framework are made of a high-strength material.
+20. The apparatus of claim 1, wherein the slidable second framework is configured to slide laterally in both directions along the rails.","2. The apparatus according to claim 1, wherein the driver is a hydraulic cylinder connected to the first framework and to the slidable second framework.
 
-3. The apparatus of claim 1 or 2, further comprising at least two connecting bars attached to the second framework for connection between the second framework and an implement.
+3. The apparatus according to claim 2, wherein the hydraulic cylinder is connected to the first framework by a first pivot mount that permits pivoting movement about a first pivot axis and is connected to the slidable second framework by a second pivot mount that permits pivoting movement about a second pivot axis.
 
-4. The apparatus of claim 3, wherein each connecting bar is attached to a respective connector coupling the implement.
+4. The apparatus according to claim 1, further comprising a track system positioned along the length of the first framework, the track system providing a track over which the slidable second framework moves.
 
-5. The apparatus of claim 1, wherein the at least one driver comprises a hydraulic cylinder.
+5. The apparatus according to claim 1, wherein the guidance system comprises a control valve connected to the driver and a controller connected to the control valve, the controller being operable by a user to control operation of the driver.
 
-6. The apparatus of claim 5, wherein the hydraulic cylinder is pivotally linked to the first and second frameworks.
+6. The apparatus according to claim 1, wherein the guidance system is configured to automate the lateral movement of the slidable second framework based on signals received from a global positioning system.
 
-7. The apparatus of claim 5 or 6, wherein the guidance system comprises a control panel to operate the driver.
+7. The apparatus according to claim 1, wherein the connectors supported by the slidable second framework are quick-attach connectors for rapid attachment and detachment of the implement.
 
-8. The apparatus of claim 7, wherein the control panel possesses control buttons facilitating the bidirectional motion of the second framework along the rails.
+8. The apparatus according to claim 1, wherein the first framework has a plurality of vertically spaced apart, laterally extending rails.
 
-9. The apparatus of claim 1, wherein the first and second frameworks are composed of steel.
+9. The apparatus according to claim 1, wherein the upper attachment and the lower attachments can be adjusted in height.
 
-10. The apparatus of claim 1, wherein the connections to the three-point hitch of the mobile machinery include quick-release couplings on the upper and lower attachments of the first framework.
+10. The apparatus according to claim 1, further comprising a locking system connected to the slidable second framework, the locking system being operable to lock the slidable second framework in a desired lateral position along the rails.
 
-11. The apparatus of claim 1, comprising an upper cross beam and a lower cross beam both adjustable in height to vary the height of the first framework.
+11. The apparatus according to claim 1, wherein the first framework further comprises at least one support leg extending downwardly from the lower cross beam.
 
-12. The apparatus of claim 11, wherein height adjustment of the upper and lower cross beams are facilitated by a ratchet and pawl mechanism.
+12. The apparatus according to claim 1, wherein each of the at least two upwardly extending, laterally spaced apart posts of the slidable second framework comprises a top end attached to one of the at least two sleeves and a bottom end, and each of the at least two sleeves extends downwardly from the top end of one of the at least two posts.
 
-13. The apparatus of claim 1, wherein the connectors to the implement consist of quick-release couplings on the second framework.
+13. The apparatus according to claim 12, wherein each of the at least two posts further comprises a connector bracket extending laterally outwardly from the bottom end of the post, each connector bracket functioning as one of the connectors supported by the slidable second framework for connecting the slidable second framework to the implement.
 
-14. The apparatus of claim 1, wherein the connectors on the second framework are adjustable to accommodate implements of varying sizes.
+14. The apparatus according to claim 1, wherein the first framework and the slidable second framework are largely constructed of high-strength steel.
 
-15. The apparatus of claim 1 or 2, further comprising a locking mechanism to selectively immobilize the second framework along the rails.
-
-16. The apparatus of claim 1 or 9, wherein the first and second frameworks are substantially rectangular.
-
-17. The apparatus of claim 3, wherein the connecting bars are length adjustable to accommodate implements of varying sizes.
-
-18. The apparatus of claim 1, wherein the mobile machinery with the three-point hitch is a tractor.
-
-19. The apparatus of claim 1 or 18, wherein the implement is designed for conducting agricultural operations.
-
-20. The apparatus of claim 7, wherein the guidance system also manages the operation of an attached implement.","European claims:
-
-1. An adjustable apparatus to facilitate the connection of an implement onto a three-point hitch of mobile machinery, such that the apparatus comprises a first framework and a second framework which has the capacity to slide relative to the first framework on rails.
-
-2. The apparatus as stated in claim 1, wherein the rails include height adjustable studs to aid in modification of the height of the first framework.
-
-3. The apparatus as stated in claim 1 or 2, further including at least two connector bars attached to the second framework to facilitate the connection between the second framework and the implement.
-
-4. The apparatus according to claim 3, wherein each connector bar is connected to a specific connector on the implement.
-
-5. The apparatus as cited in claim 1, wherein the apparatus comprises at least one driver, the driver being a hydraulic cylinder.
-
-6. The apparatus according to claim 5, wherein the hydraulic cylinder is pivotally connected to both the first and the second frameworks.
-
-7. The apparatus according to claim 1, 5 or 6, wherein the guidance system of the apparatus comprises a control panel to operate the driver.
-
-8. The apparatus according to claim 7, wherein the control panel employs control buttons which facilitate the bi-directional movement of the second framework along the rails.
-
-9. The apparatus according to claim 1 or 7, constructed mainly from steel.
-
-10. The apparatus as stated in claim 1, which encompasses quick-release couplings on the upper and lower attachments of the first framework.
-
-11. The apparatus according to claim 1, that includes an upper cross beam and a lower cross beam adjustable in height for various height needs of the first framework.
-
-12. The apparatus according to claim 11, wherein height adjustment of the upper and lower cross beams is achieved through a ratchet and pawl mechanism.
-
-13. The apparatus according to claim 1, with connectors which consist of quick-release couplings on the second framework to the implement.
-
-14. The apparatus as stated in claim 1, that has connectors adjustable to accommodate implements of varying sizes.
-
-15. The apparatus according to claim 1, which includes a lock mechanism engineered to selectively immobilise the second framework's movement along the rails.
-
-16. The apparatus according to claim 1 or 9, wherein the design of the frameworks is essentially rectangular in shape.
-
-17. The apparatus as stated in claim 3, where the connecting bars are adjustable in length to fit implements of differing sizes.
-
-18. The apparatus according to claim 1, wherein the device employing the three-point hitch is a tractor.
-
-19. The apparatus as stated in claim 1 or 3, where the implement is suited for agricultural operations.
-
-20. The apparatus according to claim 1, 7 or 19, where the guidance system is designed to manage the function of the attached implement.
-"
+15. The apparatus according to claim 1, wherein the implement is an agricultural tool such as a plow or a cultivator."
