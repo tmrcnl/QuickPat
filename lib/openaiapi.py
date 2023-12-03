@@ -7,7 +7,7 @@ openai.api_key_path = "openai.apikey"
 def sendAPIRequest(system_content, user_content, temp_value=1, max_tokens_value=256, top_p_value=1, frequency_penalty_value=0, presence_penalty_value=0):
 
     response = openai.ChatCompletion.create(
-      model="gpt-4",
+      model="gpt-4-1106-preview",
       messages=[
         {
           "role": "system",

@@ -1,19 +1,35 @@
 import os
 
 FILES_DIR = "files"
-INPUT_FILE = os.path.join(FILES_DIR, "ipa200102.xml")
-PROCESSED_FILE = os.path.join(FILES_DIR, "processed-ipa200102.parquet")
-INDEX_FILE = os.path.join(FILES_DIR, "index-ipa200102.index")
 
-GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts.csv")
-GENERATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_abstracts_llama2.csv")
-EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts.csv")
+# INPUT_FILE = os.path.join(FILES_DIR, "ipa200102.xml")
+# PROCESSED_FILE = os.path.join(FILES_DIR, "processed-ipa200102.parquet")
+# INDEX_FILE = os.path.join(FILES_DIR, "index-ipa200102.index")
 
-GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline.csv")
-EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline.csv")
+# GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts.csv")
+# GENERATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_abstracts_llama2.csv")
+# EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts.csv")
 
-GENERATED_CLAIMS_FILE = os.path.join(FILES_DIR, "generated_claims.csv")
-EVALUATED_CLAIMS_FILE = os.path.join(FILES_DIR, "evaluated_claims.csv")
+# GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline.csv")
+# EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline.csv")
+
+# GENERATED_CLAIMS_FILE = os.path.join(FILES_DIR, "generated_claims.csv")
+# EVALUATED_CLAIMS_FILE = os.path.join(FILES_DIR, "evaluated_claims.csv")
+
+INPUT_FILE = os.path.join(FILES_DIR, "ipa231130.xml")
+PROCESSED_FILE = os.path.join(FILES_DIR, "processed-ipa231130.parquet")
+INDEX_FILE = os.path.join(FILES_DIR, "index-ipa231130.index")
+
+GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts_ipa231130.csv")
+GENERATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_abstracts_llama2_ipa231130.csv")
+EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts_ipa231130.csv")
+
+GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline_ipa231130.csv")
+EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline_ipa231130.csv")
+
+GENERATED_CLAIMS_FILE = os.path.join(FILES_DIR, "generated_claims_ipa231130.csv")
+EVALUATED_CLAIMS_FILE = os.path.join(FILES_DIR, "evaluated_claims_ipa231130.csv")
+
 
 PATENT_INDICES = [0, 100, 1000, 2000, 5001]
 # 0       20200000001     SYSTEM FOR CONNECTING IMPLEMENT TO MOBILE MACHINERY
