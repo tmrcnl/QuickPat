@@ -24,3 +24,6 @@ Evaluates the generated abstracts from previous step using cosine similarity and
 
 ### rag.py
 Searches the index for other abstracts that match the search query abstract.
+
+### generateClaims.py
+Based on an input claim and claims of similar-abstract applications, generates additional claims using GPT4 and writes to a csv file.
