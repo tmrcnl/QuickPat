@@ -23,6 +23,7 @@ INDEX_FILE = os.path.join(FILES_DIR, "index-ipa231130.index")
 GENERATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "generated_abstracts_ipa231130.csv")
 GENERATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_abstracts_llama2_ipa231130.csv")
 EVALUATED_ABSTRACTS_FILE = os.path.join(FILES_DIR, "evaluated_abstracts_ipa231130.csv")
+EVALUATED_ABSTRACTS_LLAMA2_FILE = os.path.join(FILES_DIR, "evaluated_abstracts_llama2_ipa231130.csv")
 
 GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts-baseline_ipa231130.csv")
 EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline_ipa231130.csv")
