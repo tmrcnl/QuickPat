@@ -11,7 +11,7 @@ df = pd.DataFrame(columns=['i', 'title', 'ground_truth_claims', 'generated_US_cl
 
 # Open AI API parameters
 temp_value = 1
-max_tokens_value = 2006
+max_tokens_value = 1066 # 2006
 top_p_value = 1
 frequency_penalty_value = 0
 presence_penalty_value = 0
@@ -29,10 +29,17 @@ for _, patent in generated_abstracts_df.iterrows():
     top_k = 5 # 5 closest patent records from DB
     omit_index = i
     results = rag.RAGCall(generated_abstract, top_k, omit_index)
-    example_claims = ' '.join(map(str, results['claim_data']))
+
+    # truncate to the first 20 claims of each example claim set
+    truncated_claims = [claims[:20] for claims in results['claim_data']]
+
+    # example_claims = ' '.join(map(str, results['claim_data']))
+    example_claims = ' '.join(map(str, truncated_claims))
 
     ground_truth_claims = processed_patents_df.iloc[i]["claim_data"]
     claims_prompt = 'Claim 1: ' + first_claim + '\n Example claims: ' + example_claims
+
+    print('len claims_prompt: ', len(claims_prompt))
 
     api_US_response = openaiapi.sendAPIRequest(US_claims_system, claims_prompt, temp_value, max_tokens_value, top_p_value, frequency_penalty_value, presence_penalty_value)
     generated_US_claims = first_claim + '\n\n' + api_US_response.choices[0].message.content

@@ -12,7 +12,7 @@ top_p_value = 1
 frequency_penalty_value = 0
 presence_penalty_value = 0
 
-abstract_system = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to itself, or the words "abstract", "invention", "patent", "patent application", or "document". Avoid discussing the advantages or improvements of what is described. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
+abstract_system = 'Generate a patent abstract from the provided claim that is suitable for use in a patent application. In the abstract, do not make reference to the words "abstract", "invention", "patent", "patent application", or "document". Do not discuss the advantages or improvements. Use simple and plain language, but avoid using slang. Limit the abstract to 150 words.'
 
 df = pd.DataFrame(columns=['i', 'title', 'ground_truth_abstract', 'generated_abstract'])
 
