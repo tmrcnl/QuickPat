@@ -2,6 +2,9 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, TextIteratorStream
 import torch
 from threading import Thread
 
+if torch.cuda.is_available():
+    print("Using CUDA")
+
 # based on https://huggingface.co/spaces/huggingface-projects/llama-2-7b-chat/blob/main/app.py
 
 MODEL_ID = "meta-llama/Llama-2-7b-chat-hf"
@@ -11,6 +14,7 @@ tokenizer.use_default_system_prompt = False
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.bfloat16,
+    device_map="auto",
 )
 
 def generate(system_content, user_content, temp_value=1, max_tokens_value=256, top_p_value=1):
@@ -19,6 +23,7 @@ def generate(system_content, user_content, temp_value=1, max_tokens_value=256, t
     conversation.append({"role": "user", "content": user_content})
 
     input_ids = tokenizer.apply_chat_template(conversation, return_tensors="pt")
+    input_ids = input_ids.to(model.device)
 
     # streamer = TextIteratorStreamer(tokenizer, timeout=30.0, skip_prompt=True, skip_special_tokens=True)
     # generate_kwargs = dict(
