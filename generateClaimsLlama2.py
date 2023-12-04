@@ -21,8 +21,8 @@ def cache_claims_prompts():
         omit_index = i
         results = rag.RAGCall(generated_abstract, top_k, omit_index)
 
-        # truncate to the first 10 claims of each example claim set
-        truncated_claims = [claims[:10] for claims in results['claim_data']]
+        # truncate to the first 5 claims of each example claim set
+        truncated_claims = [claims[:5] for claims in results['claim_data']]
 
         # example_claims = ' '.join(map(str, results['claim_data']))
         example_claims = ' '.join(map(str, truncated_claims))
@@ -79,7 +79,6 @@ for row_num, patent in generated_abstracts_df.iterrows():
         'ground_truth_claims': ground_truth_claims,
         'generated_US_claims': generated_US_claims
     }, ignore_index=True)
-    break
 
 print("writing to file", constants.GENERATED_CLAIMS_LLAMA2_FILE)
 df.to_csv(constants.GENERATED_CLAIMS_LLAMA2_FILE, index=False)
