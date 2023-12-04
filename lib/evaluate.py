@@ -42,7 +42,7 @@ def evaluateUsingGPT4(generated_text):
     prompt = f'''
 You are a patent lawyer and you are judging the quality of the given abstract. Give it a score from 1-5, 1 being the lowest and 5 being the best.
 
-Give the result in pure json with two keys: "score" and "rational". Start and end the reply with curly braces. Do not use markdown syntax.
+Give the result in pure json with two keys: "score" and "rationale". Start and end the reply with curly braces. Do not use markdown syntax.
 '''
 
     resp = openaiapi.sendAPIRequest(prompt, generated_text)
