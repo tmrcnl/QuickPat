@@ -29,7 +29,10 @@ GENERATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "generated_abstracts
 EVALUATED_ABSTRACTS_BASELINE_FILE = os.path.join(FILES_DIR, "evaluated_abstracts-baseline_ipa231130.csv")
 
 GENERATED_CLAIMS_FILE = os.path.join(FILES_DIR, "generated_claims_ipa231130.csv")
+GENERATED_CLAIMS_LLAMA2_FILE = os.path.join(FILES_DIR, "generated_claims_llama2_ipa231130.csv")
 EVALUATED_CLAIMS_FILE = os.path.join(FILES_DIR, "evaluated_claims_ipa231130.csv")
+
+CACHED_CLAIMS_PROMPTS_FILES = os.path.join(FILES_DIR, "cached_claims_prompts_ipa231130.csv")
 
 
 PATENT_INDICES = [0, 100, 1000, 2000, 5001]

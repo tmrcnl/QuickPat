@@ -2,7 +2,7 @@ import lib.openaiapi as openaiapi
 import pandas as pd
 import lib.constants as constants
 import lib.evaluate as evaluate
-import rag
+import lib.rag as rag
 
 processed_patents_df = pd.read_parquet(constants.PROCESSED_FILE)
 generated_abstracts_df = pd.read_csv(constants.GENERATED_ABSTRACTS_FILE)
