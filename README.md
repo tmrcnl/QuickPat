@@ -1,5 +1,8 @@
 # QuickPat
 
+QuickPat generates an abstract and additional claims for use in a patent application, based on a single human-authored claim that defines what is new and inventive about the invention.
+
+## Data source
 https://bulkdata.uspto.gov/data/patent/application/redbook/fulltext/2020/
 
 ## Some commands
